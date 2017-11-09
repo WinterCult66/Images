@@ -49,14 +49,12 @@ public class HomeController {
 
             File file = new File(fullPath);
             if (file.exists() && file.isFile()) {
-                log.debug("Exist...");
+                log.info("Exist...");
                 ImageOptimizer.sendImage(req, resp, file);
             } else {
                 //search in DB
                     System.out.println("ERROR");
-                }
-
-            
+                }         
 
         } catch (Exception ex) {
             log.error("Error : {}", ex);
